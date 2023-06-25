@@ -24,7 +24,7 @@ export default async function ProjectsPage() {
 		(project) => project.slug === "polyglo",
 	)!;
 	const top2 = allProjects.find((project) => project.slug === "demostore")!;
-	const top3 = allProjects.find((project) => project.slug === "IslamJs")!;
+	const top3 = allProjects.find((project) => project.slug === "autorental")!;
 	const sorted = allProjects
 		.filter((p) => p.published)
 		.filter(
