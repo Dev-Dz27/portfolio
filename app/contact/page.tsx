@@ -7,7 +7,7 @@ import { Card } from "../components/card";
 const socials = [
 	{
 		icon: <Linkedin size={20} />,
-		href: "https://www.linkedin.com/in/chekkal-youcef-seif-el-islam-342202208/",
+		href: "https://www.linkedin.com/in/cysi/",
 		label: "Linkedin",
 		handle: "@Chekkal_Youcef",
 	},
