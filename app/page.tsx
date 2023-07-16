@@ -41,7 +41,7 @@ export default function Home() {
             href="https://www.univ-mosta.dz/"
             className="underline duration-500 hover:text-zinc-300"
           >
-             Mostanem University
+             Mostaganem University
           </Link>
           <br />
 		  while exploring {" "}
