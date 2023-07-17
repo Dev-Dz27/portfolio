@@ -67,7 +67,7 @@ export const Header: React.FC<Props> = ({ project, views }) => {
 								views,
 							)}
 						</span>
-						<Link target="_blank" href="https://www.linkedin.com/in/chekkal-youcef-seif-el-islam-342202208">
+						<Link target="_blank" href="https://www.linkedin.com/in/cysi">
 							<Linkedin
 								className={`w-6 h-6 duration-200 hover:font-medium ${
 									isIntersecting
