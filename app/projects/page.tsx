@@ -1,8 +1,9 @@
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
 import { allProjects } from "contentlayer/generated";
-import { Navigation } from "../components/nav";
-import { Card } from "../components/card";
+import { Navigation } from "@/components/nav";
+import { Card } from "@/components/card";
 import { Article } from "./article";
 import { Redis } from "@upstash/redis";
 import { Eye } from "lucide-react";
@@ -44,9 +45,12 @@ export default async function ProjectsPage() {
 			<Navigation />
 			<div className="px-6 pt-16 mx-auto space-y-8 max-w-7xl lg:px-8 md:space-y-16 md:pt-24 lg:pt-32">
 				<div className="max-w-2xl mx-auto lg:mx-0">
-					<h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
+					{/* <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
 						Projects
-					</h2>
+					</h2> */}
+<h1 className="font-foldit text-8xl tracking-tight text-zinc-100">
+              Projects
+            </h1>
 					<p className="mt-4 text-zinc-400">
 						Some of the projects are from work and some are on my own time.
 					</p>
@@ -83,6 +87,19 @@ export default async function ProjectsPage() {
 								>
 									{featured.title}
 								</h2>
+								<div className="relative mb-3 min-h-[250px] sm:min-h-[350px] md:mb-5">
+            <Image
+              className="object-contain"
+			  src="/booking-react-redux-light.jpeg"
+              fill={true}
+              alt={`${featured.title} image`}
+              placeholder="blur"
+            //   blurDataURL={featured.image.asset?.metadata.lqip}
+              blurDataURL="/booking-react-redux-light-blur.jpg"
+              priority
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </div>
 								<p className="mt-4 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300">
 									{featured.description}
 								</p>

@@ -1,9 +1,14 @@
-import "../global.css";
-import { Inter } from "@next/font/google";
-import LocalFont from "@next/font/local";
+import './globals.css'
+// import { Inter, Nunito_Sans } from "@next/font/google";
+// import { Foldit, Nunito_Sans } from 'next/font/google'
+// import LocalFont from "@next/font/local";
+import { Foldit, Nunito_Sans } from 'next/font/google'
+import LocalFont from 'next/font/local'
 import { Metadata } from "next";
-import { Analytics } from "./components/analytics";
-import { GoogleAnalyticsScript } from "@/util/GoogleAnalytics";
+import { Analytics } from "@/components/analytics";
+import { GoogleAnalyticsScript } from "@/lib/GoogleAnalytics";
+import Script from "next/script";
+import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: {
@@ -39,31 +44,49 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  twitter: {
-    title: "Chronark",
-    card: "summary_large_image",
-  },
+  // twitter: {
+  //   title: "Chronark",
+  //   card: "summary_large_image",
+  // },
   icons: {
     shortcut: "/favicon.png",
   },
 };
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
+
+
+const nunitoSans = Nunito_Sans({ subsets: ['latin'], display: 'swap' })
+const foldit = Foldit({
+  subsets: ['latin'],
+  style: ['normal'],
+  display: 'swap',
+  variable: '--font-foldit',
+})
 
 const calSans = LocalFont({
-  src: "../public/fonts/CalSans-SemiBold.ttf",
-  variable: "--font-calsans",
-});
-
+  src: '../public/fonts/CalSans-SemiBold.ttf',
+  variable: '--font-calsans',
+  display: 'swap',
+})
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
+    <html lang="en" 
+    // className={[inter.variable, calSans.variable].join(" ")}
+    className={cn(
+      nunitoSans.className,
+      calSans.variable,
+      foldit.variable,
+      'dark'
+    )}
+    >
+        <Script
+        src="https://beamanalytics.b-cdn.net/beam.min.js"
+        data-token={process.env.BEAM_API_TOKEN}
+        async // TODO: replace with strategy? https://nextjs.org/docs/app/api-reference/components/script#props
+      />
       <body
         className={`bg-black ${
           process.env.NODE_ENV === "development" ? "debug-screens" : undefined
