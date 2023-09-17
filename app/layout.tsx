@@ -1,14 +1,14 @@
-import './globals.css'
+import "./globals.css";
 // import { Inter, Nunito_Sans } from "@next/font/google";
 // import { Foldit, Nunito_Sans } from 'next/font/google'
 // import LocalFont from "@next/font/local";
-import { Foldit, Nunito_Sans } from 'next/font/google'
-import LocalFont from 'next/font/local'
+import { Foldit, Nunito_Sans } from "next/font/google";
+import LocalFont from "next/font/local";
 import { Metadata } from "next";
 import { Analytics } from "@/components/analytics";
 import { GoogleAnalyticsScript } from "@/lib/GoogleAnalytics";
 import Script from "next/script";
-import { cn } from '@/lib/utils';
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: {
@@ -53,40 +53,46 @@ export const metadata: Metadata = {
   },
 };
 
-
-const nunitoSans = Nunito_Sans({ subsets: ['latin'], display: 'swap' })
+const nunitoSans = Nunito_Sans({ subsets: ["latin"], display: "swap" });
 const foldit = Foldit({
-  subsets: ['latin'],
-  style: ['normal'],
-  display: 'swap',
-  variable: '--font-foldit',
-})
+  subsets: ["latin"],
+  style: ["normal"],
+  display: "swap",
+  variable: "--font-foldit",
+});
 
 const calSans = LocalFont({
-  src: '../public/fonts/CalSans-SemiBold.ttf',
-  variable: '--font-calsans',
-  display: 'swap',
-})
+  src: "../public/fonts/CalSans-SemiBold.ttf",
+  variable: "--font-calsans",
+  display: "swap",
+});
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" 
-    // className={[inter.variable, calSans.variable].join(" ")}
-    className={cn(
-      nunitoSans.className,
-      calSans.variable,
-      foldit.variable,
-      'dark'
-    )}
+    <html
+      lang="en"
+      // className={[inter.variable, calSans.variable].join(" ")}
+      className={cn(
+        nunitoSans.className,
+        calSans.variable,
+        foldit.variable,
+        "dark"
+      )}
     >
-        <Script
+      <Script
         src="https://beamanalytics.b-cdn.net/beam.min.js"
         data-token={process.env.BEAM_API_TOKEN}
         async // TODO: replace with strategy? https://nextjs.org/docs/app/api-reference/components/script#props
       />
+{/* Tidio Chat  */}
+      <Script
+        src="https://code.tidio.co/uhuq4md42kqigg5cqnrzaib15bucgif4.js"
+        async // TODO: replace with strategy? https://nextjs.org/docs/app/api-reference/components/script#props
+      />
+
       <body
         className={`bg-black ${
           process.env.NODE_ENV === "development" ? "debug-screens" : undefined
