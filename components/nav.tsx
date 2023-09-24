@@ -22,6 +22,7 @@ export const Navigation: React.FC<NavigationProps> = ({ fixed = true }) => {
   }, []);
   const navigation = [
     { name: "Projects", href: "/projects" },
+    { name: "Templates", href: "/templates" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];

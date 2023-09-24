@@ -46,6 +46,42 @@ export const Project = defineDocumentType(() => ({
 	computedFields,
 }));
 
+export const Template = defineDocumentType(() => ({
+	name: "Template", // Change the name to "Template"
+	filePathPattern: "./templates/**/*.mdx", // Update the file path pattern
+	contentType: "mdx",
+
+	fields: {
+		published: {
+			type: "boolean",
+		},
+		title: {
+			type: "string",
+			required: true,
+		},
+		description: {
+			type: "string",
+			required: true,
+		},
+		date: {
+			type: "date",
+		},
+		url: {
+			type: "string",
+		},
+		repository: {
+			type: "string",
+		},
+		featuredImage: { 
+			type: "string",
+		},
+		category: {
+			type: "string",
+		},
+	},
+	computedFields,
+}));
+
 export const Page = defineDocumentType(() => ({
 	name: "Page",
 	filePathPattern: "pages/**/*.mdx",
@@ -64,7 +100,7 @@ export const Page = defineDocumentType(() => ({
 
 export default makeSource({
 	contentDirPath: "./content",
-	documentTypes: [Page, Project],
+	documentTypes: [Page, Project, Template], // Include the Template document type
 	mdx: {
 		remarkPlugins: [remarkGfm],
 		rehypePlugins: [
