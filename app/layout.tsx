@@ -1,11 +1,8 @@
 import "./globals.css";
-// import { Inter, Nunito_Sans } from "@next/font/google";
-// import { Foldit, Nunito_Sans } from 'next/font/google'
-// import LocalFont from "@next/font/local";
 import { Foldit, Nunito_Sans } from "next/font/google";
 import LocalFont from "next/font/local";
 import { Metadata } from "next";
-import { Analytics } from "@/components/analytics";
+// import { Analytics } from "@/components/analytics";
 import { GoogleAnalyticsScript } from "@/lib/GoogleAnalytics";
 import Script from "next/script";
 import { cn } from "@/lib/utils";
@@ -25,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "devdzportfolio.vercel.app",
     images: [
       {
-        url: "https://chronark.com/og.png",
+        url: "/og.jpeg",
         width: 1920,
         height: 1080,
       },
@@ -99,7 +96,7 @@ export default function RootLayout({
         }`}
       >
         <GoogleAnalyticsScript />
-        <Analytics />
+        {/* <Analytics /> */}
         {children}
       </body>
     </html>
