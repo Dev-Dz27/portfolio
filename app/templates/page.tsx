@@ -45,7 +45,7 @@ export default async function ProjectsPage() {
               Templates
             </h1>
 					<p className="mt-4 text-zinc-400">
-						Some of the Templates are from work and some are on my own time.
+					Bring your business to life with our customizable websites.
 					</p>
 				</div>
 				<div className="w-full h-px bg-zinc-800" />

@@ -49,7 +49,10 @@ export default function Example() {
                   although I'm just getting started. I have contributed a few
                   public articles on topics related to technology, development,
                   and productivity. Check them out on{" "}
-                  <Link href="https://medium.com/@CraftedX">Medium</Link>.
+                  <Link target="_blank" href="https://medium.com/@CraftedX">
+                    Medium
+                  </Link>
+                  .
                 </p>
               </div>
             </div>

@@ -69,9 +69,6 @@ export const Template = defineDocumentType(() => ({
 		url: {
 			type: "string",
 		},
-		repository: {
-			type: "string",
-		},
 		featuredImage: { 
 			type: "string",
 		},
