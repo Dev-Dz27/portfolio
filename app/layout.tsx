@@ -3,7 +3,6 @@ import { Foldit, Nunito_Sans } from "next/font/google";
 import LocalFont from "next/font/local";
 import { Metadata } from "next";
 import { Analytics } from "@/components/analytics";
-import { GoogleAnalyticsScript } from "@/lib/GoogleAnalytics";
 import Script from "next/script";
 import { cn } from "@/lib/utils";
 
@@ -79,24 +78,24 @@ export default function RootLayout({
         "dark"
       )}
     >
+      {/* Beam Analytics  */}
+
       <Script
         src="https://beamanalytics.b-cdn.net/beam.min.js"
         data-token={process.env.BEAM_API_TOKEN}
         async // TODO: replace with strategy? https://nextjs.org/docs/app/api-reference/components/script#props
       />
-{/* Tidio Chat  */}
+      {/* Tidio Chat  */}
       <Script
         src="https://code.tidio.co/uhuq4md42kqigg5cqnrzaib15bucgif4.js"
         async // TODO: replace with strategy? https://nextjs.org/docs/app/api-reference/components/script#props
       />
-
+      <Analytics />
       <body
         className={`bg-black ${
           process.env.NODE_ENV === "development" ? "debug-screens" : undefined
         }`}
       >
-        <GoogleAnalyticsScript />
-        <Analytics />
         {children}
       </body>
     </html>
