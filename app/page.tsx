@@ -52,7 +52,7 @@ IslamJs
             href="https://nextjs.org/blog/next-13"
             className="underline duration-500 hover:text-zinc-300"
           >
-            Next.js 13
+            Next.js 
           </Link>{" "}
 		  at night.
         </h2>
