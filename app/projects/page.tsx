@@ -40,8 +40,6 @@ export default async function ProjectsPage() {
 				new Date(a.date ?? Number.POSITIVE_INFINITY).getTime(),
 		);
 
-
-
 	return (
 		<div className="relative pb-16">
 			<Navigation />
@@ -89,7 +87,7 @@ export default async function ProjectsPage() {
 								<div className="relative mb-3 min-h-[250px] sm:min-h-[350px] md:mb-5">
             <Image
               className="object-contain"
-			  src="/booking-react-redux-light.jpeg"
+			  src={featured?.featuredImage}
               fill={true}
               alt={`${featured?.title} image`}
               placeholder="blur"
