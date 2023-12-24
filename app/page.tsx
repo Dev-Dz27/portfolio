@@ -37,7 +37,7 @@ IslamJs
       <div className="animate-glow hidden h-px w-screen animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0 md:block" />
       <div className="mx-4 my-16 animate-fade-in text-center">
         <h2 className="text-sm text-zinc-500 ">
-		Hello, I'm Youcef Seif El Islam, I'm currently a student of English at {" "}
+		Hello, I'm Youcef Seif El Islam, I'm currently a student at {" "}
           <Link
             target="_blank"
             href="https://www.univ-mosta.dz/"
@@ -52,7 +52,7 @@ IslamJs
             href="https://nextjs.org/blog/next-13"
             className="underline duration-500 hover:text-zinc-300"
           >
-            Next.js 13
+            Next.js 
           </Link>{" "}
 		  at night.
         </h2>
