@@ -31,7 +31,7 @@ export default function Home() {
        </div>
        <h1 className="duration-1500 z-10 animate-title cursor-default whitespace-nowrap bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-200 via-gray-400 to-gray-600 bg-clip-text font-display text-6xl text-transparent md:text-[140px]">
         {/* {page.title} */}
-IslamJs
+CraftedX
       </h1>
 
       <div className="animate-glow hidden h-px w-screen animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0 md:block" />

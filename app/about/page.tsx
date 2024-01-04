@@ -22,7 +22,7 @@ const socials = [
     icon: <Github size={20} />,
     href: "https://github.com/Dev-Dz27",
     label: "Github",
-    handle: "IslamJs",
+    handle: "CraftedX",
   },
 ];
 

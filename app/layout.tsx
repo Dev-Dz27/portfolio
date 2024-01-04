@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: {
-    default: "IslamJs",
+    default: "CraftedX",
     template: "%s | devdzportfolio.vercel.app",
   },
   description:
