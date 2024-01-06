@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description:
     "Self-taught web developer proficient with Next.js and Tailwind ",
   openGraph: {
-    title: "chronark.com",
+    title: "https://devdzportfolio.vercel.app",
     description:
       "Self-taught web developer proficient with Next.js and Tailwind ",
     url: "https://devdzportfolio.vercel.app",
@@ -80,11 +80,11 @@ export default function RootLayout({
     >
       {/* Beam Analytics  */}
 
-      <Script
+      {/* <Script
         src="https://beamanalytics.b-cdn.net/beam.min.js"
         data-token={process.env.BEAM_API_TOKEN}
         async // TODO: replace with strategy? https://nextjs.org/docs/app/api-reference/components/script#props
-      />
+      /> */}
       {/* Tidio Chat  */}
       <Script
         src="https://code.tidio.co/uhuq4md42kqigg5cqnrzaib15bucgif4.js"
