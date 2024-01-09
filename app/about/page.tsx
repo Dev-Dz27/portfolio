@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Navigation } from "@/components/nav";
 import { Card } from "@/components/card";
+import StacksCard from "@/components/stacks-card";
 
 const socials = [
   {
@@ -56,10 +57,11 @@ export default function Example() {
                 </p>
               </div>
             </div>
+                  <StacksCard/>
           </div>
           <div className="mx-auto">
             <Image
-              className="duration-600 ease-in-out  "
+              className="duration-600 ease-in-out mx-auto "
               src="/my-signature.svg"
               width={300}
               height={200}
