@@ -37,7 +37,7 @@ export default function Example() {
             <div>
               <div className="mx-auto max-w-2xl lg:mx-0">
                 <p className="mt-4 pb-8  font-foldit text-8xl tracking-tight text-zinc-100 ">
-                  My Story
+                  About Me
                 </p>
                 {/* <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
                   Youcef Seif El Islam
@@ -46,10 +46,16 @@ export default function Example() {
               <div className="prose prose-invert py-8 text-white  ">
                 {/* <PortableText value={description} components={ptComponents} /> */}
                 <p>
-                  Writing is a passion of mine that i recently discovered,
-                  although I'm just getting started. I have contributed a few
-                  public articles on topics related to technology, development,
-                  and productivity. Check them out on{" "}
+                  I am particularly interested in collaborating with early-stage
+                  startups and founders, providing my expertise to help define
+                  their unique online presence.
+                </p>
+                <p>
+                  Recently discovering a newfound passion for writing, I've
+                  begun my journey in sharing insights on technology,
+                  development, and productivity. You can find some of my
+                  published articles on Medium where I delve into these
+                  topics. Check them out on{" "}
                   <Link target="_blank" href="https://medium.com/@CraftedX">
                     Medium
                   </Link>
@@ -57,7 +63,7 @@ export default function Example() {
                 </p>
               </div>
             </div>
-                  <StacksCard/>
+            <StacksCard />
           </div>
           <div className="mx-auto">
             <Image

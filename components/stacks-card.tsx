@@ -1,6 +1,6 @@
 'use client'
 
-import { Flashlight } from 'lucide-react'
+import { Zap } from 'lucide-react'
 import { motion } from 'framer-motion'
 import React from 'react'
 
@@ -14,7 +14,6 @@ import {
   IconGit,
   IconHTML,
   IconJavascript,
-  IconJest,
   IconMarkdown,
   IconMySQL,
   IconNextJS,
@@ -28,6 +27,8 @@ import {
   IconVite,
   IconVSCode,
   IconShadcn,
+  IconPhotoshop,
+  IconCanva,
 } from './icons'
 
 type InfiniteMovingCardsProps = {
@@ -79,7 +80,7 @@ const StacksCard = () => {
   return (
     <div className='flex h-60 flex-col gap-2 overflow-hidden rounded-xl bg-background-lighter/60 p-4 shadow-card-border lg:p-6'>
       <div className='flex items-center gap-2'>
-        <Flashlight fill='currentColor' size={18} />
+        <Zap fill='currentColor' size={18} />
         <h2 className='text-sm font-light'>Stacks</h2>
       </div>
       <InfiniteMovingCards
@@ -117,8 +118,16 @@ const StacksCard = () => {
             icon: <IconReactJS width='52' height='52' />
           },
           {
-            name: 'Python',
-            icon: <IconPython width='52' height='52' />
+            name: 'ShadCn',
+            icon: <IconShadcn width='52' height='52' />
+          },
+          {
+            name: 'Photoshop',
+            icon: <IconPhotoshop width='58' height='58' />
+          },
+          {
+            name: 'Canva',
+            icon: <IconCanva width='52' height='52' />
           },
           {
             name: 'Postgres',
@@ -154,8 +163,8 @@ const StacksCard = () => {
             icon: <IconVSCode width='52' height='52' />
           },
           {
-            name: 'ShadCn',
-            icon: <IconShadcn width='52' height='52' />
+            name: 'Python',
+            icon: <IconPython width='52' height='52' />
           },
           {
             name: 'Cloudflare',
@@ -164,10 +173,6 @@ const StacksCard = () => {
           {
             name: 'Markdown',
             icon: <IconMarkdown width='52' height='52' />
-          },
-          {
-            name: 'Jest',
-            icon: <IconJest width='52' height='52' />
           },
           {
             name: 'Node.js',
