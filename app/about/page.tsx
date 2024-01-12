@@ -6,52 +6,12 @@ import StacksCard from "@/components/stacks-card";
 
 const inspiration = [
   {
-    name: "leerob.io",
-    href: "https://leerob.io/",
-  },
-  {
-    name: "nextra",
-    href: "https://nextra.site/",
-  },
-  {
-    name: "theodorusclarence.com",
-    href: "https://theodorusclarence.com/",
+    name: "basement.studio",
+    href: "https://basement.studio/",
   },
   {
     name: "ped.ro",
     href: "https://ped.ro/",
-  },
-  {
-    name: "delba.dev",
-    href: "https://delba.dev/",
-  },
-  {
-    name: "joshwcomeau.com",
-    href: "https://www.joshwcomeau.com/",
-  },
-  {
-    name: "blog.maximeheckel.com",
-    href: "https://blog.maximeheckel.com/",
-  },
-  {
-    name: "zenorocha.com",
-    href: "https://zenorocha.com/",
-  },
-  {
-    name: "jahir.dev",
-    href: "https://jahir.dev/",
-  },
-  {
-    name: "anishde.dev",
-    href: "https://anishde.dev/",
-  },
-  {
-    name: "nikolovlazar.com",
-    href: "https://nikolovlazar.com/",
-  },
-  {
-    name: "samuelkraft.com",
-    href: "https://samuelkraft.com/",
   },
   {
     name: "bentogrids",
@@ -62,8 +22,53 @@ const inspiration = [
     href: "https://ui.aceternity.com/",
   },
   {
+    name: "leerob.io",
+    href: "https://leerob.io/",
+  },
+  {
+    name: "zenorocha.com",
+    href: "https://zenorocha.com/",
+  },
+
+  {
+    name: "anishde.dev",
+    href: "https://anishde.dev/",
+  },
+  {
+    name: "samuelkraft.com",
+    href: "https://samuelkraft.com/",
+  },
+  {
+    name: "nikolovlazar.com",
+    href: "https://nikolovlazar.com/",
+  },
+  {
+    name: "blog.maximeheckel.com",
+    href: "https://blog.maximeheckel.com/",
+  },
+  {
+    name: "joshwcomeau.com",
+    href: "https://www.joshwcomeau.com/",
+  },
+  {
+    name: "chronark.com",
+    href: "https://www.chronark.com/",
+  },
+  {
     name: "hover.dev",
     href: "https://www.hover.dev/",
+  },
+  {
+    name: "jahir.dev",
+    href: "https://jahir.dev/",
+  },
+  {
+    name: "theodorusclarence.com",
+    href: "https://theodorusclarence.com/",
+  },
+  {
+    name: "nextra",
+    href: "https://nextra.site/",
   },
 ];
 

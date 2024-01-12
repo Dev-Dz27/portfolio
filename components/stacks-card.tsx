@@ -1,10 +1,10 @@
-'use client'
+"use client";
 
-import { Zap } from 'lucide-react'
-import { motion } from 'framer-motion'
-import React from 'react'
+import { Zap } from "lucide-react";
+import { motion } from "framer-motion";
+import React from "react";
 
-import { cn } from '@/lib/utils' 
+import { cn } from "@/lib/utils";
 
 import {
   IconCloudflare,
@@ -29,160 +29,165 @@ import {
   IconShadcn,
   IconPhotoshop,
   IconCanva,
-} from './icons'
+} from "./icons";
 
 type InfiniteMovingCardsProps = {
   items: Array<{
-    name: string
-    icon: React.ReactNode
-  }>
-  direction?: 'left' | 'right'
-}
+    name: string;
+    icon: React.ReactNode;
+  }>;
+  direction?: "left" | "right";
+};
 
 const InfiniteMovingCards = (props: InfiniteMovingCardsProps) => {
-  const { items, direction = 'left' } = props
+  const { items, direction = "left" } = props;
 
   return (
     <div
-      className={cn('overflow-hidden')}
+      className={cn("overflow-hidden")}
       style={{
         maskImage:
-          'linear-gradient(to right, transparent, white 20%, white 80%, transparent)'
+          "linear-gradient(to right, transparent, white 20%, white 80%, transparent)",
       }}
     >
       <motion.ul
-        className='flex w-max gap-4 py-4 will-change-transform'
+        className="flex w-max gap-4 py-4 will-change-transform"
         animate={{
           x:
-            direction === 'left'
-              ? ['0', 'calc(-50% - 0.5rem)']
-              : ['calc(-50% - 0.5rem)', '0']
+            direction === "left"
+              ? ["0", "calc(-50% - 0.5rem)"]
+              : ["calc(-50% - 0.5rem)", "0"],
         }}
         transition={{
-          ease: 'linear',
+          ease: "linear",
           duration: 20,
-          repeat: Number.POSITIVE_INFINITY
+          repeat: Number.POSITIVE_INFINITY,
         }}
       >
         {[...Array.from({ length: 2 }).keys()].map(() =>
           items.map((item) => (
-            <li className='[&>svg]:rounded-md' key={item.name}>
+            <li className="[&>svg]:rounded-md" key={item.name}>
               {item.icon}
             </li>
           ))
         )}
       </motion.ul>
     </div>
-  )
-}
+  );
+};
 
 const StacksCard = () => {
   return (
-    <div className='flex h-60 flex-col gap-2 overflow-hidden rounded-xl bg-background-lighter/60 p-4 shadow-card-border lg:p-6'>
-      <div className='flex items-center gap-2'>
-        <Zap fill='currentColor' size={18} />
-        <h2 className='text-sm font-light'>Stacks</h2>
+    <div className="flex h-60 flex-col gap-2 overflow-hidden rounded-xl bg-background-lighter/60 p-4 shadow-card-border lg:p-6">
+      <div className="flex items-center gap-2">
+        <Zap fill="currentColor" size={18} />
+        <h2 className="text-sm font-light">Stacks</h2>
       </div>
       <InfiniteMovingCards
         items={[
           {
-            name: 'HTML',
-            icon: <IconHTML width='52' height='52' />
+            name: "HTML",
+            icon: <IconHTML width="52" height="52" />,
           },
           {
-            name: 'CSS',
-            icon: <IconCSS width='52' height='52' />
+            name: "CSS",
+            icon: <IconCSS width="52" height="52" />,
           },
           {
-            name: 'Javascript',
-            icon: <IconJavascript width='52' height='52' />
+            name: "Javascript",
+            icon: <IconJavascript width="52" height="52" />,
           },
           {
-            name: 'Typescript',
-            icon: <IconTypescript width='52' height='52' />
+            name: "Typescript",
+            icon: <IconTypescript width="52" height="52" />,
+          },
+
+          {
+            name: "Tailwindcss",
+            icon: <IconTailwindcss width="52" height="52" />,
           },
           {
-            name: 'Figma',
-            icon: <IconFigma width='52' height='52' />
+            name: "Next.js",
+            icon: <IconNextJS width="52" height="52" />,
           },
           {
-            name: 'Tailwindcss',
-            icon: <IconTailwindcss width='52' height='52' />
+            name: "React.js",
+            icon: <IconReactJS width="52" height="52" />,
           },
           {
-            name: 'Next.js',
-            icon: <IconNextJS width='52' height='52' />
+            name: "Vite",
+            icon: <IconVite width="52" height="52" />,
+          },
+
+          // {
+          //   name: 'Python',
+          //   icon: <IconPython width='52' height='52' />
+          // },
+
+          {
+            name: "Postgres",
+            icon: <IconPostgres width="52" height="52" />,
           },
           {
-            name: 'React.js',
-            icon: <IconReactJS width='52' height='52' />
+            name: "MySQL",
+            icon: <IconMySQL width="52" height="52" />,
           },
           {
-            name: 'ShadCn',
-            icon: <IconShadcn width='52' height='52' />
+            name: "Node.js",
+            icon: <IconNodeJS width="52" height="52" />,
           },
-          {
-            name: 'Photoshop',
-            icon: <IconPhotoshop width='58' height='58' />
-          },
-          {
-            name: 'Canva',
-            icon: <IconCanva width='52' height='52' />
-          },
-          {
-            name: 'Postgres',
-            icon: <IconPostgres width='52' height='52' />
-          }
         ]}
-        direction='right'
+        direction="right"
       />
       <InfiniteMovingCards
         items={[
           {
-            name: 'Prisma',
-            icon: <IconPrisma width='52' height='52' />
+            name: "VSCode",
+            icon: <IconVSCode width="52" height="52" />,
           },
           {
-            name: 'MySQL',
-            icon: <IconMySQL width='52' height='52' />
+            name: "Prisma",
+            icon: <IconPrisma width="52" height="52" />,
+          },
+
+          {
+            name: "Firebase",
+            icon: <IconFirebase width="52" height="52" />,
           },
           {
-            name: 'Firebase',
-            icon: <IconFirebase width='52' height='52' />
+            name: "Git",
+            icon: <IconGit width="52" height="52" />,
+          },
+
+          {
+            name: "ShadCn",
+            icon: <IconShadcn width="52" height="52" />,
           },
           {
-            name: 'Git',
-            icon: <IconGit width='52' height='52' />
+            name: "Cloudflare",
+            icon: <IconCloudflare width="52" height="52" />,
           },
           {
-            name: 'Vite',
-            icon: <IconVite width='52' height='52' />
+            name: "Markdown",
+            icon: <IconMarkdown width="52" height="52" />,
           },
           {
-            name: 'VSCode',
-            icon: <IconVSCode width='52' height='52' />
+            name: "Figma",
+            icon: <IconFigma width="52" height="52" />,
           },
           {
-            name: 'Python',
-            icon: <IconPython width='52' height='52' />
+            name: "Photoshop",
+            icon: <IconPhotoshop width="58" height="58" />,
           },
           {
-            name: 'Cloudflare',
-            icon: <IconCloudflare width='52' height='52' />
+            name: "Canva",
+            icon: <IconCanva width="52" height="52" />,
           },
-          {
-            name: 'Markdown',
-            icon: <IconMarkdown width='52' height='52' />
-          },
-          {
-            name: 'Node.js',
-            icon: <IconNodeJS width='52' height='52' />
-          }
         ]}
-        direction='left'
+        direction="left"
       />
     </div>
-  )
-}
+  );
+};
 
-export default StacksCard
+export default StacksCard;
