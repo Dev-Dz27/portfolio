@@ -12,6 +12,7 @@ const redis = Redis.fromEnv();
 
 export const revalidate = 60;
 export default async function ProjectsPage() {
+	// to increment the number of views: INCRBY pageviews:projects:sheetstore
 	const views = (
 		await redis.mget<number[]>(
 			...allProjects.map((p) => ["pageviews", "projects", p.slug].join(":")),

@@ -1,33 +1,73 @@
 "use client";
-import { Github, Mail, Twitter, Linkedin } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { Navigation } from "@/components/nav";
-import { Card } from "@/components/card";
 import StacksCard from "@/components/stacks-card";
 
-const socials = [
+const inspiration = [
   {
-    icon: <Linkedin size={20} />,
-    href: "https://www.linkedin.com/in/cysi/",
-    label: "Linkedin",
-    handle: "@Chekkal_Youcef",
+    name: "leerob.io",
+    href: "https://leerob.io/",
   },
   {
-    icon: <Mail size={20} />,
-    href: "mailto:chekkalislam@gmail.com",
-    label: "Email",
-    handle: "chekkalislam@gmail.com",
+    name: "nextra",
+    href: "https://nextra.site/",
   },
   {
-    icon: <Github size={20} />,
-    href: "https://github.com/Dev-Dz27",
-    label: "Github",
-    handle: "CraftedX",
+    name: "theodorusclarence.com",
+    href: "https://theodorusclarence.com/",
+  },
+  {
+    name: "ped.ro",
+    href: "https://ped.ro/",
+  },
+  {
+    name: "delba.dev",
+    href: "https://delba.dev/",
+  },
+  {
+    name: "joshwcomeau.com",
+    href: "https://www.joshwcomeau.com/",
+  },
+  {
+    name: "blog.maximeheckel.com",
+    href: "https://blog.maximeheckel.com/",
+  },
+  {
+    name: "zenorocha.com",
+    href: "https://zenorocha.com/",
+  },
+  {
+    name: "jahir.dev",
+    href: "https://jahir.dev/",
+  },
+  {
+    name: "anishde.dev",
+    href: "https://anishde.dev/",
+  },
+  {
+    name: "nikolovlazar.com",
+    href: "https://nikolovlazar.com/",
+  },
+  {
+    name: "samuelkraft.com",
+    href: "https://samuelkraft.com/",
+  },
+  {
+    name: "bentogrids",
+    href: "https://bentogrids.com/",
+  },
+  {
+    name: "ui.aceternity.com",
+    href: "https://ui.aceternity.com/",
+  },
+  {
+    name: "hover.dev",
+    href: "https://www.hover.dev/",
   },
 ];
 
-export default function Example() {
+export default function AboutPage() {
   return (
     <>
       <main className="relative min-h-screen bg-gradient-to-tl from-zinc-800 via-zinc-400/10 to-zinc-900 pb-16 pt-6 md:pt-1">
@@ -54,8 +94,8 @@ export default function Example() {
                   Recently discovering a newfound passion for writing, I've
                   begun my journey in sharing insights on technology,
                   development, and productivity. You can find some of my
-                  published articles on Medium where I delve into these
-                  topics. Check them out on{" "}
+                  published articles on Medium where I delve into these topics.
+                  Check them out on{" "}
                   <Link target="_blank" href="https://medium.com/@CraftedX">
                     Medium
                   </Link>
@@ -65,6 +105,25 @@ export default function Example() {
             </div>
             <StacksCard />
           </div>
+          <div className="mx-auto lg:mx-0">
+            <h1 className="font-foldit text-8xl tracking-tight text-zinc-100">
+              Inspiration
+            </h1>
+            <p className="mt-4 text-zinc-400">
+              Here are some websites that inspired me a lot to build a fantastic
+              website.
+            </p>
+          </div>
+          <ul className="list-disc list-inside prose prose-invert ">
+            {inspiration.map((i) => (
+              <li>
+                <Link href={i.href} target="_blank">
+                  {i.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
           <div className="mx-auto">
             <Image
               className="duration-600 ease-in-out mx-auto "
