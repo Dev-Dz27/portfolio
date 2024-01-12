@@ -88,7 +88,7 @@ export default function AboutPage() {
                   Youcef Seif El Islam
                 </h2> */}
               </div>
-              <div className="prose prose-invert py-8 text-white  ">
+              <div className="prose prose-invert py-8 text-zinc-400  ">
                 {/* <PortableText value={description} components={ptComponents} /> */}
                 <p>
                   I am particularly interested in collaborating with early-stage
@@ -110,10 +110,14 @@ export default function AboutPage() {
             </div>
             <StacksCard />
           </div>
-          <div className="mx-auto lg:mx-0">
-            <h1 className="font-foldit text-8xl tracking-tight text-zinc-100">
+          <div
+          //  className="mx-auto lg:mx-0 max-w-2xl  "
+           >
+          <div className="mx-auto lg:mx-0 max-w-2xl  ">
+            <h1 className="max-w-2xl lg:mx-0 text-zinc-100 mt-4 pb-8  font-foldit text-8xl tracking-tight ">
               Inspiration
             </h1>
+          </div>
             <p className="mt-4 text-zinc-400">
               Here are some websites that inspired me a lot to build a fantastic
               website.
