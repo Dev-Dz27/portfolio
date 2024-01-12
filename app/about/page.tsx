@@ -50,10 +50,10 @@ const inspiration = [
     name: "joshwcomeau.com",
     href: "https://www.joshwcomeau.com/",
   },
-  {
-    name: "chronark.com",
-    href: "https://www.chronark.com/",
-  },
+  // {
+  //   name: "chronark.com",
+  //   href: "https://www.chronark.com/",
+  // },
   {
     name: "hover.dev",
     href: "https://www.hover.dev/",
