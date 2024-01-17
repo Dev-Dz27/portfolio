@@ -119,7 +119,7 @@ export default function AboutPage() {
             </h1>
           </div>
             <p className="mt-4 text-zinc-400">
-              Here are some websites that inspired me a lot to build a fantastic
+              Here are some websites that inspired me a lot to build this 
               website.
             </p>
           </div>
