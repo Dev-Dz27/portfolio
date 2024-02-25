@@ -1,5 +1,3 @@
-import { Navigation } from "@/components/nav";
-import { Skeleton } from "@/components/skeleton";
 import { ArrowLeft, Eye, Github, Linkedin } from "lucide-react";
 
 export default function Loading() {
