@@ -26,7 +26,7 @@ export default async function ProjectsPage() {
 		(project) => project.slug === "sheetstore",
 	)!;
 	const top2 = allProjects.find((project) => project.slug === "react-booking")!;
-	const top3 = allProjects.find((project) => project.slug === "mitasty")!;
+	const top3 = allProjects.find((project) => project.slug === "multi-step-form")!;
 	const sorted = allProjects
 		.filter((p) => p.published)
 		.filter(
