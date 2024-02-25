@@ -20,7 +20,6 @@ import {
   IconNodeJS,
   IconPostgres,
   IconPrisma,
-  IconPython,
   IconReactJS,
   IconTailwindcss,
   IconTypescript,
@@ -30,6 +29,7 @@ import {
   IconPhotoshop,
   IconCanva,
 } from "./icons";
+import Tooltip from "./Tooltip";
 
 type InfiniteMovingCardsProps = {
   items: Array<{
@@ -66,8 +66,8 @@ const InfiniteMovingCards = (props: InfiniteMovingCardsProps) => {
       >
         {[...Array.from({ length: 2 }).keys()].map(() =>
           items.map((item) => (
-            <li className="[&>svg]:rounded-md" key={item.name}>
-              {item.icon}
+            <li className="[&>svg]:rounded-md transition-all ease-in-out " key={item.name}>
+              <Tooltip name={item.name}>{item.icon}</Tooltip>
             </li>
           ))
         )}
@@ -118,11 +118,6 @@ const StacksCard = () => {
             name: "Vite",
             icon: <IconVite width="52" height="52" />,
           },
-
-          // {
-          //   name: 'Python',
-          //   icon: <IconPython width='52' height='52' />
-          // },
 
           {
             name: "Postgres",
