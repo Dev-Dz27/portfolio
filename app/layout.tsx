@@ -3,9 +3,10 @@ import { Foldit, Nunito_Sans } from "next/font/google";
 import LocalFont from "next/font/local";
 import { Metadata } from "next";
 import { Analytics } from "@/components/analytics";
-import { SpeedInsights } from '@vercel/speed-insights/next';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
 import { cn } from "@/lib/utils";
+import LoadingWidget from "@/components/LoadindWidget";
 
 export const metadata: Metadata = {
   title: {
@@ -71,7 +72,6 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      // className={[inter.variable, calSans.variable].join(" ")}
       className={cn(
         nunitoSans.className,
         calSans.variable,
@@ -92,11 +92,8 @@ export default function RootLayout({
         async // TODO: replace with strategy? https://nextjs.org/docs/app/api-reference/components/script#props
       />
       <Analytics />
-      <body
-        className={`bg-black ${
-          process.env.NODE_ENV === "development" ? "debug-screens" : undefined
-        }`}
-      >
+        {/* <LoadingWidget /> */}
+      <body className={`bg-black`}>
         {children}
         <SpeedInsights />
       </body>
