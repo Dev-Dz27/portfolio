@@ -56,7 +56,7 @@ export default function Home() {
           while exploring{" "}
           <Link
             target="_blank"
-            href="https://nextjs.org/blog/next-13"
+            href="https://nextjs.org/blog/next-14"
             className="underline duration-500 hover:text-zinc-300"
           >
             Next.js
