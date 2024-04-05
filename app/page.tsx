@@ -60,6 +60,13 @@ export default function Home() {
             className="underline duration-500 hover:text-zinc-300"
           >
             Next.js
+          </Link>{" "}and{" "} 
+          <Link
+            target="_blank"
+            href="https://www.blender.org"
+            className="underline duration-500 hover:text-zinc-300"
+          >
+           Blender
           </Link>{" "}
           at night.
         </h2>
