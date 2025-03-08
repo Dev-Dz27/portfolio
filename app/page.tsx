@@ -38,7 +38,7 @@ export default function Home() {
       </div>
       <h1 className="duration-1500 z-10 animate-title cursor-default whitespace-nowrap bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-200 via-gray-400 to-gray-600 bg-clip-text font-display text-6xl text-transparent md:text-[140px]">
         {/* {page.title} */}
-        CraftedX
+         [c.ysi]
       </h1>
 
       <div className="animate-glow hidden h-px w-screen animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0 md:block" />
@@ -56,19 +56,19 @@ export default function Home() {
           while exploring{" "}
           <Link
             target="_blank"
-            href="https://nextjs.org/blog/next-14"
+            href="https://www.adobe.com/products/aftereffects.html"
             className="underline duration-500 hover:text-zinc-300"
           >
-            Next.js
+            AE
           </Link>{" "}and{" "} 
           <Link
             target="_blank"
-            href="https://www.blender.org"
+            href="https://www.blender.org/"
             className="underline duration-500 hover:text-zinc-300"
           >
            Blender
           </Link>{" "}
-          at night.
+          every full moon.
         </h2>
       </div>
     </main>
